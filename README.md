@@ -8,5 +8,6 @@ Collect historical loan application data, including information about applicants
 ### Data Preprocessing: 
 Clean, transform, and preprocess the data to handle missing values, outliers, and ensure it is in a suitable format for machine learning. This may include feature engineering and encoding categorical variables.
 
-
+### Model Development:
+Build and train a machine learning model using the preprocessed data. Consider various algorithms such as logistic regression, decision trees, random forests, or neural networks. Tune hyperparameters and evaluate model performance using appropriate metrics (e.g., accuracy, precision, recall, F1-score).
 
