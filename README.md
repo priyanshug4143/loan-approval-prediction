@@ -5,7 +5,8 @@ The objective of this project is to Develop Machine Learning model to predict ac
 ### Data Collection: 
 Collect historical loan application data, including information about applicants (e.g., age, income, credit score, employment status) and loan characteristics (e.g., loan amount, interest rate). This data will serve as the basis for training and testing the machine learning model.
 
-
+### Data Preprocessing: 
+Clean, transform, and preprocess the data to handle missing values, outliers, and ensure it is in a suitable format for machine learning. This may include feature engineering and encoding categorical variables.
 
 
 
