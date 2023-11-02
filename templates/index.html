@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Loan Approval Prediction Form </title>
+    <style> body{font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background-color: #F5F5F5;}
+    .container{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.form-title{
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.form-input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.form-submit{
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;   
+}
+.form-submit:hover{
+    background-color: #0056B3;
+    color: #FFFFFF;
+}
+#gender{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#married{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#dependets{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#education{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#self_employed{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#property_area{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#credit_history{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h2 class="form-title"> Loan Approval Prediction Form </h2>
+        <form method="post" action="/predict">
+
+            <label for="Gender"> Select Gender</label>
+            <select id="gender" name="Gender">
+                <option value="Male"> Male </option>
+                <option value="Female"> Female </option>
+            </select>
+
+
+            <label for="Married"> Select Married</label>
+            <select id="married" name="Marry">
+                <option value="Yes"> Yes </option>
+                <option value="No"> No </option>
+            </select>
+
+            <label for="Dependets"> Dependets </label>
+            <select id="dependets" name="Dependents">
+                <option value="0"> 0 </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+            </select>
+
+            <label for="Education"> Education </label>
+            <select id="education" name="Educations">
+                <option value="Graduate"> Graduate </option>
+                <option value="Not Graduate"> Not Graduate </option>
+            </select>
+
+            <label for="Self Employed"> Self Employed </label>
+            <select id="self_employed"  name="Self">
+                <option value="Yes"> Yes </option>
+                <option value="No"> No </option>
+            </select>
+
+
+            <input class="form-input" type=int name="Applicant" placeholder="Applicant Income">
+
+            <input class="form-input" type=int name="income" placeholder="Co-Applicant Income">
+
+            <input class="form-input" type=int name="Loan"  placeholder="Loan Amount">
+
+            <input class="form-input" type=int name="Term" placeholder="Loan Amount Term">
+
+            <label for="property_area"> Property Area </label>
+            <select id="property_area" name="Area">
+                <option value="Rural"> Rural </option>
+                <option value="Urban"> Urban </option>
+                <option value="Semi-urban"> Semi-urban</option>
+            </select>
+
+            <label for="Credit History"> Credit History </label>
+            <select id="credit_history" name="credit">
+                <option value="0.0"> 0.0 </option>
+                <option value="1.0"> 1.0 </option>
+            </select>
+
+            <input class="form-submit"type="submit" value="Predict">
+            
+             {% if result %}
+             <p>{{ result }}</p>
+
+             {% endif %}
+
+</body>
+</html>
